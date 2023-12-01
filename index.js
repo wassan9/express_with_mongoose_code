@@ -3,7 +3,9 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://127.0.0.1:27017/shopApp', {useNewUrlParser: true, useUnifiedTopology: true}) //IPv6(://localhost:27017)ではなく、IPv4を使用（://127.0.0.1:27017）
+const Product = require("./models/product");
+
+mongoose.connect('mongodb://127.0.0.1:27017/farmStand', {useNewUrlParser: true, useUnifiedTopology: true}) //IPv6(://localhost:27017)ではなく、IPv4を使用（://127.0.0.1:27017）
   .then(() => {
     console.log("MongoDBコネクションOK!!!");
   })
